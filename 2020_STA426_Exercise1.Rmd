@@ -1,0 +1,33 @@
+---
+title: "2020 STA 426 Exercise Week1"
+author: "Melanie Willimann"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+editor_options:
+  chunk_output_type: inline
+---
+### Problem 3: 
+
+Create an HTML document that samples 100 values from a log-normal distribution (say, mu=1, sigma=.25) and create a histogram of the distribution and the distribution on the log scale.
+
+Report the mean and variance of the sample in line in the text
+
+```{r}
+rm(list=ls())
+
+## create log-normal distribution, µ ≈ mean, sigma ≈ sd
+x <- rlnorm(100, meanlog = 1, sdlog = 0.25)
+
+## plot distribution on log scale
+hist(log(x))
+
+## mean of log-normal distribution x
+mean(x)
+
+## variance of log-normal distribution x
+var(x)
+
+```
+
