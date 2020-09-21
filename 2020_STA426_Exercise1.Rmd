@@ -2,9 +2,9 @@
 title: "2020 STA 426 Exercise Week1"
 author: "Melanie Willimann"
 output:
-  pdf_document: default
   html_document:
     df_print: paged
+  pdf_document: default
 editor_options:
   chunk_output_type: inline
 ---
@@ -19,6 +19,10 @@ rm(list=ls())
 
 ## create log-normal distribution, µ ≈ mean, sigma ≈ sd
 x <- rlnorm(100, meanlog = 1, sdlog = 0.25)
+
+
+## plot distribution in histogram
+hist(x)
 
 ## plot distribution on log scale
 hist(log(x))
